@@ -23,7 +23,11 @@ async function setWeatherToState(url) {
 class Weather extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { temps: [], loading: true, status: [] }
+    this.state = { 
+      temps: [], 
+      loading: true, 
+      status: [] 
+    }
     this.setWeather = setWeatherToState.bind(this);
   }
 
