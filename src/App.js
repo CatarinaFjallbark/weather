@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Weather from './Weather';
+import Graph from './Graph';
 
 const WeatherHeadline = styled.div`
   font-size: 3em;
@@ -15,10 +16,13 @@ const AppStyle = styled.div`
 `
 
 const App = () => (
+  <div>
     <AppStyle>
-        <WeatherHeadline>Väder 18.00 i Lund!</WeatherHeadline>
-        <Weather/>
+      <WeatherHeadline>Väder 18.00 i Lund!</WeatherHeadline>
+      <Weather />
+      <Graph />
     </AppStyle>
+  </div>
 );
 
 export default App;
