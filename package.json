@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "@vx/axis": "0.0.173",
+    "@vx/curve": "0.0.165",
     "@vx/scale": "0.0.165",
+    "@vx/shape": "0.0.176",
     "axios": "^0.18.0",
     "moment": "^2.22.2",
     "react": "^16.5.0",
