@@ -26,7 +26,7 @@ class Graph extends React.Component {
     render() {
         return (
             <Wrapper>
-                <svg style={{ display: 'block', margin: 'auto', padding: '50px'}} width={"500"} height={"500"}>
+                <svg style={{ paddingLeft: '150px', paddingTop: '50px'}} width={"500"} height={"500"}>
                     <LinePath
                         left={100}
                         data={series}
