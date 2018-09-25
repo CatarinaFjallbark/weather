@@ -20,7 +20,6 @@ const App = () => (
     <AppStyle>
       <WeatherHeadline>Väder 18.00 i Lund!</WeatherHeadline>
       <Weather />
-      <Graph />
     </AppStyle>
   </div>
 );

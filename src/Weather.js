@@ -2,7 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import Day from './Day';
+import Graph from './Graph';
 
+const WeatherWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`
 
 const WeatherCard = styled.div`
   display: flex;
@@ -23,10 +29,10 @@ async function setWeatherToState(url) {
 class Weather extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      temps: [], 
-      loading: true, 
-      status: [] 
+    this.state = {
+      temps: [],
+      loading: true,
+      status: []
     }
     this.setWeather = setWeatherToState.bind(this);
   }
@@ -47,7 +53,12 @@ class Weather extends React.Component {
           statusText={this.state.status[i]} />
       );
     }
-    return <WeatherCard>{days}</WeatherCard>;
+    return (
+      <WeatherWrapper>
+        <WeatherCard>{days}</WeatherCard>
+        <Graph series={this.state.temps} />
+      </WeatherWrapper>
+    );
   }
 }
 
